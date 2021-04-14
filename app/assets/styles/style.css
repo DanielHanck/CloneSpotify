@@ -1,303 +1,260 @@
 @import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
 @import url(//db.onlinewebfonts.com/c/21a1184148d11d67c19f5076b909d63b?family=Circular+Spotify+Tx+T+Book);
-
-.app{  
+.app {
   background: white;
   display: grid;
-  grid-template-areas: 
-    "header"
-    "main"
-    "footer";
- 
+  grid-template-areas: "header" "main" "footer";
   grid-template-columns: auto;
-  grid-template-rows: auto;  
+  grid-template-rows: auto;
 }
-
-.container__logo {
-  color: white; 
+.app .container {
+  top: 0;
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  position: fixed;
   height: 90px;
+  z-index: 1;
 }
-
-.link_padrao {
+.app .container__logo {
   color: white;
-  font-family:"Circular Spotify Tx T Book";
-  -webkit-tap-highlight-color: transparent;  
-}
-
-.header {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  background-color: black;
-  z-index:1;
-  position: fixed;
   height: 90px;
 }
-
-.container {
-  top: 0;  
-  width: 1200px;  
-  display: flex;    
-  justify-content: space-between;
-  background-color: black;
-  position: fixed;
-  height: 90px;
-  z-index:1;
-}
-
-.container__menu {
-  height: 100%;
-  width: 500px;
-}
-
-.container__menu__list{
-  height: 100%;
-}
-
-.container__menu__link {
-  color: white; 
-  text-decoration: none; 
-}
-.container__menu__link:hover {
-  color: #5bd760;  
-}
-.container__menu__item{
-  display: flex;
-  justify-content: space-between;
-  font-family:"Circular Spotify Tx T Book";
-  align-items: center;
-  height: 100%;
-
-}
-
-.container__logo__img {
+.app .container__logo__img {
   max-width: 200px;
   max-height: 43px;
   width: auto;
   height: auto;
   padding-top: 26px;
 }
-
-
-
-.main {  
- display: grid;
- grid-template-rows: 55% 5% 25%;
- background-color: rgb(41, 65, 171);
- grid-area: main; 
- height: 968px;
- color: white;
- background-image: url(https://www-growth.scdn.co/static/home/bursts.svg);
- background-size: 175%;
- background-position: 46% 4%;
- -webkit-box-pack: center;
- justify-content: center;
- min-height: 846px;
- 
+.app .container .container__menu {
+  height: 100%;
+  width: 500px;
 }
-
-.title__center{    
+.app .container .container__menu__list {
+  height: 100%;
+}
+.app .container .container__menu__link {
+  color: white;
+  text-decoration: none;
+}
+.app .container .container__menu__link:hover {
+  color: #5bd760;
+}
+.app .container .container__menu__item {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Circular Spotify Tx T Book";
+  align-items: center;
+  height: 100%;
+}
+.app .link_default {
+  color: white;
+  font-family: "Circular Spotify Tx T Book";
+  -webkit-tap-highlight-color: transparent;
+}
+.app .header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: black;
+  z-index: 1;
+  position: fixed;
+  height: 90px;
+}
+.app .main {
+  display: grid;
+  grid-template-rows: 55% 5% 25%;
+  background-color: #2941ab;
+  grid-area: main;
+  height: 968px;
+  color: white;
+  background-image: url(https://www-growth.scdn.co/static/home/bursts.svg);
+  background-size: 175%;
+  background-position: 46% 4%;
+  -webkit-box-pack: center;
+  justify-content: center;
+  min-height: 846px;
+}
+.app .main__title__center {
   padding-top: 321px;
   padding-bottom: 0;
-  display: flex;  
+  display: flex;
   justify-content: center;
   width: 100%;
-  
 }
-.title__center__text{    
+.app .main__title__center__text {
   font-size: 156px;
   line-height: 166px;
-  box-sizing: border-box;   
-  font-family:"Circular Spotify Tx T Book";
+  box-sizing: border-box;
+  font-family: "Circular Spotify Tx T Book";
   -webkit-tap-highlight-color: transparent;
   display: block;
   margin-top: 0px;
   font-weight: 900;
-  color: #5bd760; 
-  height: 80px;   
+  color: #5bd760;
+  height: 80px;
   transform: translate(-120px, 0px);
   letter-spacing: -0.04em !important;
-  
 }
-
-.description{
+.app .main__description {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   box-sizing: border-box;
-  font-family:"Circular Spotify Tx T Book";
-  -webkit-tap-highlight-color: transparent;    
+  font-family: "Circular Spotify Tx T Book";
+  -webkit-tap-highlight-color: transparent;
   letter-spacing: 0px;
   color: #5bd760;
   font-size: 18px;
-  line-height: 24px;  
+  line-height: 24px;
   height: 30px;
-  
 }
-
-.box{
+.app .main__box {
   margin-top: 15px;
   display: flex;
   justify-content: center;
-  transition-duration: 0.1s;  
+  transition-duration: 0.1s;
 }
-
-.box__download {  
+.app .main__box__download {
   width: 220px;
   height: 50px;
   background-color: #5bd760;
   border-radius: 500px;
 }
-
-.box__download__main_buttom {
-  font-family:"Circular Spotify Tx T Book";
-  -webkit-tap-highlight-color: transparent;   
-  color:  rgb(41, 65, 171);
+.app .main__box__download:hover {
+  width: 230px;
+  height: 60px;
+  transition-duration: 0.1s;
+}
+.app .main__box__download__main_buttom {
+  font-family: "Circular Spotify Tx T Book";
+  -webkit-tap-highlight-color: transparent;
+  color: #2941ab;
   background-color: #5bd760;
-  border: 2px solid rgb(41, 65, 171);
+  border: 2px solid #2941ab;
   border-radius: 500px;
   width: 100%;
   height: 100%;
 }
-
-.box__download__main_buttom:hover {
+.app .main__box__download__main_buttom:hover {
   font-size: 15px;
 }
-
-.box__download:hover{
-  width: 230px;
-  height: 60px;
-  transition-duration: 0.1s;  
-}
-
-.footer {
+.app .footer {
   display: flex;
   justify-content: center;
-  background-color: black; 
+  background-color: black;
   grid-area: footer;
   height: 550px;
 }
-
-.footer_container {
+.app .footer_container {
   margin-top: 80px;
-  width: 1200px; 
-  display: grid;      
-  grid-template-areas: 
-  "footer_container__info"
-  "footer_container__sobre";
+  width: 1200px;
+  display: grid;
+  grid-template-areas: "footer_container__info" "footer_container__about";
   grid-template-columns: auto;
-  grid-template-rows: auto;  
-  background-color: black;  
+  grid-template-rows: auto;
+  background-color: black;
   height: 90px;
-  z-index:2;
+  z-index: 2;
 }
-
-
-.footer_container__info {
+.app .footer_container__info {
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   color: white;
   height: 388px;
 }
-.footer_container__sobre {
+.app .footer_container__about {
   display: grid;
-  grid-template-rows:  30px 20px;
+  grid-template-rows: 30px 20px;
   color: white;
-  font-family:"Circular Spotify Tx T Book";
-  -webkit-tap-highlight-color: transparent; 
-  ;
+  font-family: "Circular Spotify Tx T Book";
+  -webkit-tap-highlight-color: transparent;
+}
+.app .footer_container__about__terms__list_terms {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Circular Spotify Tx T Book";
+  -webkit-tap-highlight-color: transparent;
+}
+.app .footer_container__about__list_terms {
+  color: #919496;
+  letter-spacing: 0.08em;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 12px;
+}
+.app .footer_container__about__list_terms:hover {
+  color: #5bd760;
+  transition-duration: 0.1s;
+}
+.app .footer_container__about__footer_company {
+  display: flex;
+  justify-content: flex-end;
+}
+.app .footer_container__about__terms {
+  display: flex;
+  justify-content: space-between;
+}
+.app .footer_container__about__footer_company__link__Brasil {
+  color: #919496;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  font-size: 12px;
+}
+.app .footer_container__about__direitos {
+  color: #919496;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  font-size: 12px;
+}
+.app .footer_container__social_networks {
+  display: flex;
+  justify-content: space-between;
+}
+.app .footer_container__social_networks__img_default {
+  height: 40px;
+}
+.app .footer_container__social_networks__img_default:hover {
+  height: 45px;
 }
 
 .list_padrao {
-  font-family:"Circular Spotify Tx T Book";
-  -webkit-tap-highlight-color: transparent;   
+  font-family: "Circular Spotify Tx T Book";
+  -webkit-tap-highlight-color: transparent;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.item_padrao {
+.item_default {
   margin: 20px;
-  
-}
-.link_padrao{
-  text-decoration: none;
-}
-.first-child{
-  color: #919496;
-  letter-spacing: .08em;
 }
 
-.link_padrao:hover {
-  color: #5bd760;  
+.link_default {
+  text-decoration: none;
+}
+
+.first-child {
+  color: #919496;
+  letter-spacing: 0.08em;
+}
+
+.link_default:hover {
+  color: #5bd760;
   transition-duration: 0.1s;
 }
 
-.footer_container__sobre__termos__list_termos{
-  display: flex;
-  justify-content: space-between;
-  font-family:"Circular Spotify Tx T Book";
-  -webkit-tap-highlight-color: transparent;  
-}
-.footer_container__sobre__list_termos {
-  color: #919496;
-  letter-spacing: .08em;
-  margin:10px;
-  text-decoration: none;
-  font-size: 12px;
-}
-
-.footer_container__sobre__list_termos:hover {
-  color: #5bd760; 
-  transition-duration: 0.1s;  
-}
-
-.footer_container__sobre__footer_company {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.footer_container__sobre__termos {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer_container__sobre__footer_company__link__Brasil {
-  color: #919496;
-  letter-spacing: .08em;
-  text-decoration: none;
-  font-size: 12px;
-
-}
 .link__Brasil:hover {
-  color: #5bd760; 
-  transition-duration: 0.1s;  
+  color: #5bd760;
+  transition-duration: 0.1s;
 }
 
-.footer_container__sobre__direitos {
+.link_terms {
   color: #919496;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
   text-decoration: none;
   font-size: 12px;
 }
 
-.footer_container__social_networks{
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.footer_container__social_networks__img_default {
-  height: 40px;
-}
-
-.footer_container__social_networks__img_default:hover {
-  height: 45px;
-  
-}
-
-.link_termos {
-  color: #919496;
-  letter-spacing: .08em;
-  text-decoration: none;
-  font-size: 12px;
-}
+/*# sourceMappingURL=style.css.map */

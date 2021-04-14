@@ -1,0 +1,315 @@
+@import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
+@import url(//db.onlinewebfonts.com/c/21a1184148d11d67c19f5076b909d63b?family=Circular+Spotify+Tx+T+Book);
+
+$light-green: #5bd760;
+$white:white;
+$black: black;
+$light-blue:rgb(41, 65, 171);
+$font-default:"Circular Spotify Tx T Book";
+
+
+.app {  
+  background: $white;
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+ 
+  grid-template-columns: auto;
+  grid-template-rows: auto;  
+
+  .container {
+  top: 0;  
+  width: 1200px;  
+  display: flex;    
+  justify-content: space-between;
+  background-color: $black;
+  position: fixed;
+  height: 90px;
+  z-index:1;
+
+  
+  
+  &__logo {
+    color: $white; 
+    height: 90px;
+
+    &__img {
+      max-width: 200px;
+      max-height: 43px;
+      width: auto;
+      height: auto;
+      padding-top: 26px;
+    }
+  }
+
+  .container__menu {
+    height: 100%;
+    width: 500px;
+    
+    &__list{
+      height: 100%;
+    }
+    
+    &__link {
+      color: $white; 
+      text-decoration: none; 
+    }
+    &__link:hover {
+      color: $light-green;
+    }
+    &__item{
+      display: flex;
+      justify-content: space-between;
+      font-family:$font-default;
+      align-items: center;
+      height: 100%;
+    
+    }
+
+  }
+
+}
+
+.link_default {
+  color: $white;
+  font-family:$font-default;
+  -webkit-tap-highlight-color: transparent;  
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: $black;
+  z-index:1;
+  position: fixed;
+  height: 90px;
+}
+
+.main {  
+ display: grid;
+ grid-template-rows: 55% 5% 25%;
+ background-color:$light-blue;
+ grid-area: main; 
+ height: 968px;
+ color: $white;
+ background-image: url(https://www-growth.scdn.co/static/home/bursts.svg);
+ background-size: 175%;
+ background-position: 46% 4%;
+ -webkit-box-pack: center;
+ justify-content: center;
+ min-height: 846px;
+
+  &__title__center{    
+    padding-top: 321px;
+    padding-bottom: 0;
+    display: flex;  
+    justify-content: center;
+    width: 100%;
+    
+  }
+
+  &__title__center__text{    
+    font-size: 156px;
+    line-height: 166px;
+    box-sizing: border-box;   
+    font-family:$font-default;
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    margin-top: 0px;
+    font-weight: 900;
+    color: $light-green;
+    height: 80px;   
+    transform: translate(-120px, 0px);
+    letter-spacing: -0.04em !important;
+    
+  }
+  &__description{
+    display: flex;
+    justify-content: center;  
+    box-sizing: border-box;
+    font-family:$font-default;
+    -webkit-tap-highlight-color: transparent;    
+    letter-spacing: 0px;
+    color: #5bd760;
+    font-size: 18px;
+    line-height: 24px;  
+    height: 30px;
+    
+  }
+  
+  &__box{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    transition-duration: 0.1s;  
+  }
+  
+  &__box__download {  
+    width: 220px;
+    height: 50px;
+    background-color: $light-green;
+    border-radius: 500px;
+
+    &:hover{
+      width: 230px;
+      height: 60px;
+      transition-duration: 0.1s;  
+    }
+
+    &__main_buttom {
+      font-family:$font-default;
+      -webkit-tap-highlight-color: transparent;   
+      color: $light-blue;
+      background-color: $light-green;
+      border: 2px solid$light-blue;
+      border-radius: 500px;
+      width: 100%;
+      height: 100%;
+    }
+    
+    &__main_buttom:hover {
+      font-size: 15px;
+    }    
+  }
+ 
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: $black; 
+  grid-area: footer;
+  height: 550px;
+}
+
+.footer_container {
+  margin-top: 80px;
+  width: 1200px; 
+  display: grid;      
+  grid-template-areas: 
+  "footer_container__info"
+  "footer_container__about";
+  grid-template-columns: auto;
+  grid-template-rows: auto;  
+  background-color: $black;  
+  height: 90px;
+  z-index:2;
+
+  &__info {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    color: $white;
+    height: 388px;
+  }
+
+  &__about {
+    display: grid;
+    grid-template-rows:  30px 20px;
+    color: $white;
+    font-family:$font-default;
+    -webkit-tap-highlight-color: transparent; 
+
+    &__terms__list_terms{
+      display: flex;
+      justify-content: space-between;
+      font-family:$font-default;
+      -webkit-tap-highlight-color: transparent;  
+    }
+
+    &__list_terms {
+      color: #919496;
+      letter-spacing: .08em;
+      margin:10px;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    &__list_terms:hover {
+      color: $light-green;
+      transition-duration: 0.1s;  
+    }
+    
+    &__footer_company {
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    &__terms {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    &__footer_company__link__Brasil {
+      color: #919496;
+      letter-spacing: .08em;
+      text-decoration: none;
+      font-size: 12px;
+    
+    }
+  
+    &__direitos {
+      color: #919496;
+      letter-spacing: .08em;
+      text-decoration: none;
+      font-size: 12px;
+    }
+    
+  }  
+  
+  &__social_networks{
+    display: flex;
+    justify-content: space-between;
+
+    &__img_default {
+      height: 40px;
+    }
+    
+    &__img_default:hover {
+      height: 45px;
+      
+    }
+  }  
+}
+}
+
+
+
+.list_padrao {
+  font-family:$font-default;
+  -webkit-tap-highlight-color: transparent;   
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item_default {
+  margin: 20px;
+  
+}
+.link_default{
+  text-decoration: none;
+}
+.first-child{
+  color: #919496;
+  letter-spacing: .08em;
+}
+
+.link_default:hover {
+  color: $light-green;
+  transition-duration: 0.1s;
+}
+
+.link__Brasil:hover {
+  color: $light-green;
+  transition-duration: 0.1s;  
+}
+
+.link_terms {
+  color: #919496;
+  letter-spacing: .08em;
+  text-decoration: none;
+  font-size: 12px;
+}
